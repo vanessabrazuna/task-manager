@@ -3,6 +3,7 @@
 import { Card } from '@/components/ui/card'
 import AddTaskForm from './AddTaskForm'
 import TaskList from './TaskList'
+import TaskSearchBar from './TaskSearchBar'
 import { useAppSelector } from '@/lib/hooks'
 
 export default function TaskManager() {
@@ -27,6 +28,7 @@ export default function TaskManager() {
       <Card className="p-6">
         <div className="space-y-4">
           <AddTaskForm />
+          <TaskSearchBar />
           <TaskList />
         </div>
       </Card>
