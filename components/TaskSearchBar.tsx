@@ -14,14 +14,14 @@ export default function TaskSearchBar() {
   }
 
   return (
-    <div className="relative">
+    <div className="relative w-full">
       <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
       <Input
         type="text"
         placeholder="Search tasks..."
         value={searchQuery}
         onChange={handleSearchChange}
-        className="pl-10"
+        className="pl-10 w-full"
       />
     </div>
   )

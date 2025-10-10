@@ -1,9 +1,9 @@
 'use client'
 
 import { Card } from '@/components/ui/card'
-import AddTaskForm from './AddTaskForm'
 import TaskList from './TaskList'
 import TaskSearchBar from './TaskSearchBar'
+import AddTaskDialog from './AddTaskDialog'
 import { useAppSelector } from '@/lib/hooks'
 
 export default function TaskManager() {
@@ -27,8 +27,12 @@ export default function TaskManager() {
 
       <Card className="p-6">
         <div className="space-y-4">
-          <AddTaskForm />
-          <TaskSearchBar />
+          <div className="flex gap-2 w-full">
+            <div className="flex-1">
+              <TaskSearchBar />
+            </div>
+            <AddTaskDialog />
+          </div>
           <TaskList />
         </div>
       </Card>
