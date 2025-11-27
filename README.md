@@ -47,14 +47,12 @@ UI rápida, acessível e responsiva
 Animações suaves via tw-animate-css
 
 📦 Scripts
-
 pnpm dev     # Inicia o ambiente de desenvolvimento
 pnpm build   # Build de produção
 pnpm start   # Servir build
 pnpm lint    # ESLint
 
 📂 Estrutura resumida
-
 app/         
 components/   
 lib/       
