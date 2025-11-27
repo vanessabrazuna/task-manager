@@ -47,16 +47,14 @@ UI rápida, acessível e responsiva
 Animações suaves via tw-animate-css
 
 📦 Scripts
-bash
-Copiar código
+
 pnpm dev     # Inicia o ambiente de desenvolvimento
 pnpm build   # Build de produção
 pnpm start   # Servir build
 pnpm lint    # ESLint
 
 📂 Estrutura resumida
-csharp
-Copiar código
+
 app/         
 components/   
 lib/       
