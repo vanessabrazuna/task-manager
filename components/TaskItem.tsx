@@ -5,10 +5,11 @@ import { Checkbox } from '@/components/ui/checkbox'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Card } from '@/components/ui/card'
-import { Trash2, Edit2, Check, X } from 'lucide-react'
+import { Edit2, Check, X } from 'lucide-react'
 import { useAppDispatch } from '@/lib/hooks'
-import { toggleTask, deleteTask, editTask } from '@/lib/features/tasks/tasksSlice'
+import { toggleTask, editTask } from '@/lib/features/tasks/tasksSlice'
 import type { Task } from '@/lib/features/tasks/tasksSlice'
+import DeleteTaskDialog from './DeleteTaskDialog'
 
 interface TaskItemProps {
   task: Task
@@ -21,10 +22,6 @@ export default function TaskItem({ task }: TaskItemProps) {
 
   const handleToggle = () => {
     dispatch(toggleTask(task.id))
-  }
-
-  const handleDelete = () => {
-    dispatch(deleteTask(task.id))
   }
 
   const handleEdit = () => {
@@ -86,9 +83,11 @@ export default function TaskItem({ task }: TaskItemProps) {
               <Button size="sm" variant="ghost" onClick={handleEdit}>
                 <Edit2 className="h-4 w-4" />
               </Button>
-              <Button size="sm" variant="ghost" onClick={handleDelete}>
-                <Trash2 className="h-4 w-4" />
-              </Button>
+
+              <DeleteTaskDialog 
+                taskId={task.id} 
+                taskTitle={task.title} 
+              />
             </div>
           </>
         )}
